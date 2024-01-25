@@ -3,16 +3,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
 .palindrome {
   background-color: rgb(9, 96, 9);
   display: inline-block;
-  padding: 10px 70px;
+  max-width: 80%;
+  padding: 50px;
   color: white;
   border-radius: 10px;
+  transform: translateX(-50%);
+  transform: translateY(50%);
 }
 
 h1 {
@@ -28,19 +30,23 @@ p {
   letter-spacing: 0.2px;
 }
 
+.checkWord {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
 #palindromeChecker {
   border: unset;
-  display: inline-block;
-  padding: 20px 10px;
   font-size: 20px;
   font-weight: bold;
   background-color: #fff;
   color: rgb(9, 96, 9);
-
   cursor: pointer;
   font-size: 29px;
-  margin-left: 10px;
-  border-radius: 20px;
+  /* margin-left: 10px; */
+  border-radius: 50px;
+  padding: 20px;
 }
 
 #palindromeChecker:hover {
@@ -89,4 +95,76 @@ input {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .palindrome {
+    background-color: rgb(9, 96, 9);
+    color: white;
+    border-radius: 10px;
+    max-width: 280px;
+    padding: 7px;
+  }
+
+  #palindromeChecker {
+    border: unset;
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(9, 96, 9);
+    margin-bottom: 20px;
+    font-size: 15px;
+    margin-left: 12px;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: unset;
+    border-radius: 3px;
+  }
+
+  .checkWord {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    letter-spacing: 0.2px;
+  }
+
+  #modalContent {
+    background-color: white;
+    box-shadow: 0 0 10px #484141;
+    padding: 7px 20px;
+    width: 200px;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #ourResult {
+    font-size: 20px;
+    color: rgb(9, 96, 9);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    transform: translateX(-50%);
+    transform: translateY(50%);
+  }
 }
